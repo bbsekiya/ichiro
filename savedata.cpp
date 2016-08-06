@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <utility>
+#include <map>
 
 
 
@@ -43,6 +45,41 @@ void structToVector()
    }
 }
 
+class Stats
+{
+   public:
+      Stats() {}
+      virtual ~Stats() {}
+      
+      void endMissing() {
+      
+      
+      }
+      
+};
+
+ 
+class MyClass
+{
+   public:
+      MyClass() {}
+      virtual ~MyClass() {}
+      enum class STATE {INIT, START, MIDDLE, END};
+      enum class MISSED_MARKER {NONE, START, END};
+   private:
+      std::map<std::pair<STATE, uint32_t>, MISSED_MARKER> errorMap;
+      
+      MISSED_MARKER stats(uint32_t data) {
+      
+         auto it = errorMap.find(std::make_pair(STATE::START, 0));
+         
+         if (*it == MISSED_MARKER::NONE)
+         
+         return MISSED_MARKER::NONE;
+       }
+};
+
+  
 
 int main()
 {
