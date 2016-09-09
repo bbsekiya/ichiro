@@ -37,6 +37,9 @@ class D1 {
   
     std::cout << "d1.mys().x1 = " << d1.mys().x1 << std::endl;
  
+   HData    *h1 = Data(333,444);
+   
+   Data     *d1 = HData(3,4);
    
    
    return 0;
