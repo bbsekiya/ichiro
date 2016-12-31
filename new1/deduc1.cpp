@@ -42,6 +42,8 @@ int main()
 	
 	Data<int> d2 = func(std::move(d)) ;
 	std::cout << "d2.m_Data1 = " << d2.m_Data1 << std::endl;
+	std::cout << "d.m_Data1 = " << d.m_Data1 << std::endl;
+	
 	
 	std::cout << "\n ----------------------------\n";
 	
@@ -49,6 +51,8 @@ int main()
 
 	int y1 = func1(d3);
 	std::cout << "y1 = " << y1 << std::endl;
+	std::cout << "d3.m_Data1 = " << d3.m_Data1 << std::endl;
+	
 	
 
 
