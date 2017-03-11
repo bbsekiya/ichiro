@@ -50,8 +50,11 @@ class ConvertData
 		ConvertData(const uint32_t n=3) {
 			if (n == 2) {
 				dataSetter = boost::make_shared<data::version2::DataSetter>();
-			} else {
+			} else if n(==3) {
 				dataSetter = boost::make_shared<data::version3::DataSetter>();
+			}
+			else {
+				//throw
 			}
 			
 		}
